@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+.forms{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    font-family: 'Poppins', sans-serif;
+}
+.forms a{
+    text-decoration: none;
+    color: #D01818;
+}
+.exit-reg{
+    position: relative;
+    top: -5px;
+    left: -5px;
+    float: right;
+    font-size: 35px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+.form{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    border-radius: 12px;
+    max-width: 630px;
+    padding: 1.5% 2%;
+    transition: all 0.2s linear;
+    box-shadow: 0px 0px 54px 3px rgba(37, 25, 0, 0.14);
+}
+.form-content{
+    margin: 3% auto;
+    width: 70%;
+}
+.form-content > .form{
+    margin: 30px 0;
+}
+header{
+    font-size: 28px;
+    font-weight: 600;
+    color: #31291D;
+    text-align: center;
+}
+form{
+    margin-top: 30px;
+}
+form > .field{
+    position: relative;
+    height: 45px;
+    width: 100%;
+    margin-top: 20px;
+}
+.field > input, .field > button{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+.field > button{
+    background-color: #D01818;
+    color: #fff;
+    cursor: pointer;
+}
+.field > input{
+    padding: 0 15px;
+    border: 1px solid #CACACA;
+    
+}
+.form-link{
+    text-align: center;
+    margin-top: 10px;
+}
+.form-link > span{
+    font-size: 14px;
+    font-weight: 400;
+}
+a:hover{
+    text-decoration: underline;
+}
+.bx-hide{
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 5px;
+}
+.allert{
+    text-align: center;
+    margin-top: 20px;
+}
+.allert > .red{
+    color: red;
+}
+.allert > .green{
+    color: green;
+}
+@media (max-width: 768px) {
+    form{
+        margin-top: 0px !important;
+    }
+    .car{
+        margin-top: 0px !important;
+    }
+    .form-content{
+        margin: 1% auto;
+        width: 90%;
+    }
+    .login{
+        max-width: 90% !important;
+    }
+    .signup{
+        max-width: 291px;
+    }
+    .header{
+        font-size: 24px;
+    }
+}

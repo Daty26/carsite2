@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    margin: 0;
+    scroll-behavior: smooth;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+ul{
+    margin-bottom: 0.5rem;
+}
+a{
+    text-decoration: none;
+    scroll-behavior: smooth;
+    transition: all 3s linear;
+}
+.navbar{
+    padding: 1rem 2rem;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0px 1px 14px -7px rgba(0,0,0,0.75);
+    background-color: white;
+}
+.navCont{
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+.fixed-top{
+    position: absolute;
+}
+.nav-item:hover .nav-link {
+    color: #D01818 !important; 
+    border-bottom: 1px solid #D01818;
+    border-width: 1.5px;
+}
+.sub-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 12px 34px;
+    cursor: pointer;
+}
+.sub-item > p{
+    font-weight: 500;
+    margin: 1px 0;
+    color: #888888;
+    cursor: pointer;
+}
+#loginbutt{
+    cursor: pointer;
+}
+.bx-user{
+    font-size: 20px;
+}
+.sub-item:hover{
+    background-color: #f1f1f1;
+}
+.user-items{
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    align-items: flex-start;
+    top: 80px;  
+    right: 0px;
+    border-radius: 5px;
+    padding: 7px;
+    box-shadow: 0px 0px 54px 3px rgba(37, 25, 0, 0.14);
+}
+
+.nav-link{
+    text-decoration: none !important;
+}
+.user-items a, .si-item{
+    text-decoration: none !important;
+    color: #888888 !important;
+}
+.sub-item {
+    color: #888888;
+}
+
+
+
+
+/* Home */
+#home{
+    background-color: #C5C7DC;
+    height: 800px;
+}
+#home > .container{
+    height: 100%;
+    padding: 100px 0;
+}
+.homeCont{
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+}
+.viewButton{
+    border: none;
+    background-color: #D01818;
+    border-radius: 5px;
+    padding: 20px 10px;
+    color: white;
+}
+.mainImg img{
+    width: 100%;
+    max-width: 600px;
+}
+
+
+
+/* Filter */
+#filter{
+    background-color: #F2F5FC;
+}
+.filter-select {
+    width: auto !important; 
+    display: initial !important; 
+}   
+.filterBtn{
+    background-color: #D01818;
+    color: white;
+}
+#filter .btn:hover{
+    color: #fff !important;
+}
+
+
+/* Main car page */
+#car{
+    padding-bottom: 100px;
+}
+.mainTitle p{
+    color: #D01818;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: underline;
+    margin: 0px;
+}
+.mainTitle h2{
+    color: #0D1637;
+    font-weight: 600;
+    font-size: 38px;
+}
+.carItems{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: row;
+}
+.carItem{
+    box-shadow: 0px 0px 53px -9px rgba(37, 25, 0, 0.14);
+    border-radius: 8px;
+    cursor: pointer;
+}
+.hrefRemove{
+    text-decoration: none !important;
+    color: #08080A;
+}
+.ci-image{ 
+    height: 200px; 
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.ci-image > center > img{
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+}
+.ciName{
+    margin: 0 5px 5px 0px;
+}
+.ciName > h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 5px;
+    text-transform: capitalize;
+    overflow: hidden;
+}
+.ciPrice{
+    color: #D01818;
+    font-weight: 600;
+    font-size: 17px;
+}
+.carDescrItem{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.carDescr{
+    display: flex;
+    justify-content: center;
+}
+.ciBody{
+    padding: 1rem;
+}
+.left{
+    border-right: 1px solid #EAEAEA;
+}
+.right{
+    border-left: 1px solid #EAEAEA;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.icon > i{
+    font-size: 28px;
+}
+.carDescrName{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.carDescrName p{
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #BFC2C4;
+    text-decoration: none;
+}
+.name{
+    font-weight: 500;
+}
+.carItemCorr{
+    padding: 20px;
+}
+.carLine{
+    width: 100%;
+    height: 1px;
+    background-color: #EAEAEA;
+}
+.more{
+    display: flex;
+    justify-content: center;
+    border: 1px solid #0D1637;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.page-link{
+    color: #D01818 !important;
+}
+
+
+/* Footer */
+#footer{
+    background-color: #08080A;
+    height: 300px;
+    color: white;
+    padding: 2rem 0;
+}
+.footerCont{
+    display: flex;
+    justify-content: center;
+}
+.footerCorr{
+    display: flex;
+    justify-content: space-around;
+}
+.social-media{
+    display: flex;
+    justify-content: space-around;
+}
+.social-media > a{
+    font-size: 30px;
+    color: #eeeeee;
+    border: 1px solid #ccc;
+    line-height: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    margin: 0px 8px;
+    opacity: 0.75;
+    transition: 0.2s linear;
+    display: inline-block;
+    justify-content: center;
+}
+.social-media a i {
+    text-align: center;
+}
+.social-media > a:hover{
+    opacity: 1;
+}
+.footerCategory a{
+    color: white !important;
+}
+.num{
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+
+.nav-link{
+    font-weight: 500;
+    font-size: 17px;
+}
+.noMatches{
+    margin: 70px;
+    width: 100%;
+    font-size: 25px;
+    color: #D01818;
+}
+@media screen and (max-width: 400px){
+    .carDescr{
+        flex-direction: column;
+    }
+    .left{
+        border: none;
+    }
+    .right{
+        border: none;
+    }
+}
+@media screen and (max-width: 556px){
+    .carItems{
+        grid-template-columns: 1fr !important ;
+    }
+    .homeTitle{
+        padding: 0 20px;
+    }
+
+}
+@media screen and (max-width: 768px) {
+    .carItems{
+        grid-template-columns: 1fr !important ;
+    }
+    .car-forms{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .mainImg{
+        display: none;
+    }
+}
+@media (max-width: 992px) {
+}
+
+@media screen and (max-width: 1200px) {
+   .carItems{
+        grid-template-columns: 1fr 1fr ;
+    }
+}
