@@ -17,7 +17,7 @@
               <div class="homeTitle">
                 <h1>Продайте свою машину <br> за секунду </h1>
                 <p class="mt-4">Мы являемся самой крупной компанией по продаже б/у машин в Казахстане</p>
-                <button class="viewButton mt-4">Посмотреть машины</button>
+                <a href="index.php?page=1"><button class="viewButton mt-4">Посмотреть машины</button></a>
               </div>
               <div class="mainImg">
                 <img src="img/purepng.com-tesla-model-s-red-carcarvehicletransporttesla-961524657832miq7l.png" width="720px">

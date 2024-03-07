@@ -23,7 +23,7 @@
               <div class="homeTitle">
                 <h1>Продайте свою машину <br> за секунду </h1>
                 <p class="mt-4">Мы являемся самой крупной компанией по продаже б/у машин в Казахстане</p>
-                <button class="viewButton mt-4">Посмотреть машины</button>
+                <a href="index.php?page=1"><button class="viewButton mt-4">Посмотреть машины</button></a>
               </div>
               <div class="mainImg">
                 <img src="img/purepng.com-tesla-model-s-red-carcarvehicletransporttesla-961524657832miq7l.png" width="720px">
@@ -63,66 +63,70 @@
 
                 <?php 
                     while($row = mysqli_fetch_assoc($res)){
-                        $no_matches = false;
-                        $brand = $row['brand'];
-                        $model = $row['model'];
-                        $year = $row['year'];
-                        $transmission = $row['transmission'];
-                        $mileage = $row['mileage'];
-                        $mil = number_format($mileage, 0, '', ' ');
-                        $price = $row['price'];
-                        $num = number_format($price, 0, '', ' ');
-                        $carImg = $row['carImg'];
-                        if($transmission == "auto"){
-                          $autot = "Автомат";
-                        }elseif($transmission == "manual"){
-                          $autot = "Механика";
-                        }elseif($transmission == "variator"){
-                          $autot = "Вариатор";
-                        }elseif($transmission == "robot"){
-                          $autot = "Робот";
-                        }
-                        echo "<div class='carItemCorr'>
-                        <div class='carItem'>
-                            <div class='carItemCont'>
-                                <div class='ci-image' style='background-image:url(\"img/$carImg\");'>
-                                </div>
-                            </div>
-                            <div class='ciBody'>
-                                <div class='ciName'>
-                                    <h3 class='my-3'>
-                                        $brand $model $year 
-                                    </h3>
-                                </div>
-                                <div class='ciPrice'>
-                                    $num ₸
-                                </div>
-                                <div class='carDescr'>
-                                    <div class='carDescrItem py-3'>
-                                        <div class='icon'>
-                                            <i class='bx bx-run'></i>
-                                        </div>
-                                        <div class='carDescrName'>
-                                            <p class='type text-cente'>Пробег</p>
-                                            <span class='name text-center'>$mil км</span>
-                                        </div>
-                                    </div>
-                                    <div class='carDescrItem right py-3'>
-                                        <div class='icon'>
-                                            <i class='bx bxs-map-pin'></i>
-                                        </div>
-                                        <div class='carDescrName'>
-                                            <p class='type text-center'>КПП</p>
-                                            <span class='name text-center'>$autot</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>";
-                    }
+                      $no_matches = false;
+                      $carId = $row['carsId'];
+                      $userId = $row['userId'];
+                      $brand = $row['brand'];
+                      $model = $row['model'];
+                      $year = $row['year'];
+                      $transmission = $row['transmission'];
+                      $mileage = $row['mileage'];
+                      $mil = number_format($mileage, 0, '', ' ');
+                      $price = $row['price'];
+                      $num = number_format($price, 0, '', ' ');
+                      $carImg = $row['carImg'];
+                      if($transmission == "auto"){
+                        $autot = "Автомат";
+                      }elseif($transmission == "manual"){
+                        $autot = "Механика";
+                      }elseif($transmission == "variator"){
+                        $autot = "Вариатор";
+                      }elseif($transmission == "robot"){
+                        $autot = "Робот";
+                      }
+                      echo "<div class='carItemCorr'>
+                      <a href='car_details.php?id=$carId' class='hrefRemove'>
+                      <div class='carItem'>
+                          <div class='carItemCont'>
+                              <div class='ci-image' style='background-image:url(\"img/$carImg\");'>
+                              </div>
+                          </div>
+                          <div class='ciBody'>
+                              <div class='ciName'>
+                                  <h3 class='my-3'>
+                                      $brand $model $year 
+                                  </h3>
+                              </div>
+                              <div class='ciPrice'>
+                                  $num ₸
+                              </div>
+                              <div class='carDescr'>
+                                  <div class='carDescrItem py-3'>
+                                      <div class='icon'>
+                                          <i class='bx bx-run'></i>
+                                      </div>
+                                      <div class='carDescrName'>
+                                          <p class='type text-cente'>Пробег</p>
+                                          <span class='name text-center'>$mil км</span>
+                                      </div>
+                                  </div>
+                                  <div class='carDescrItem right py-3'>
+                                      <div class='icon'>
+                                          <i class='bx bxs-map-pin'></i>
+                                      </div>
+                                      <div class='carDescrName'>
+                                          <p class='type text-center'>КПП</p>
+                                          <span class='name text-center'>$autot</span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      </a>
+                  </div>";
+                }
                     if ($no_matches) {
-                        echo "<span class='noMatches'>Таких машин в продаже нету</span>";
+                        echo "<span class='noMatches'>Такой машины в продаже нету</span>";
                     }
                 ?>
 

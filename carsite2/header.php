@@ -266,12 +266,12 @@
 
         
         <div class="container fixed-top">
-          <nav class="navbar navbar-expand-md navbar-light justify-content-between">
+          <nav class="navbar navbar-expand-md navbar-light justify-content-between" style="height: initial !important;">
             <a href="index.php" class="navbar-brand mb-o h1">FuelFlip</a>
             <button type="button"data-bs-toggle="collapse" aria-controls="navbarNav"aria-expanded="false" aria-label="Посмотреть навигацию" data-bs-target="#navbarNav" class="navbar-toggler">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
                   <a href="#home" class="nav-link">
@@ -289,11 +289,10 @@
                   </a>
                 </li>
               </ul>
-            </div>
-            <div id="loginbutt" style="margin-right: 0px;"> 
-              <i class='bx bx-user'></i>
-            </div>
-            <ul class="user-items" style="display: none;">
+                <div id="loginbutt" style="margin-right: 0px;"> 
+                    <i class='bx bx-user'></i>
+                </div>
+                <ul class="user-items" style="display: none;">
                 <?php
                     if(!isset($_SESSION["usersid"])){
                 ?>
@@ -319,5 +318,6 @@
                     ";
                 }?>
             </ul>
+            </div>
           </nav>
         </div>

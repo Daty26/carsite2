@@ -94,6 +94,9 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     })
 });
+$('.navbar').css({ 
+    height: ''
+  });
 function addModels(selectElement, models) {
     models.forEach(model => {
         var option = document.createElement('option');

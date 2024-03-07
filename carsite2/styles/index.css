@@ -12,7 +12,6 @@ ul{
 a{
     text-decoration: none;
     scroll-behavior: smooth;
-    transition: all 3s linear;
 }
 .navbar{
     padding: 1rem 2rem;
@@ -26,6 +25,9 @@ a{
     flex-wrap: inherit;
     align-items: center;
     justify-content: space-between;
+}
+#navbarNav{
+    margin-left: 30%;
 }
 .fixed-top{
     position: absolute;
@@ -230,6 +232,12 @@ a{
 .carItemCorr{
     padding: 20px;
 }
+.carItemCorr :hover{
+    color: black;
+}
+.carItemCorr :hover h3{
+    text-decoration: underline;
+}
 .carLine{
     width: 100%;
     height: 1px;
@@ -337,12 +345,40 @@ a{
     .mainImg{
         display: none;
     }
+    .navbar-collapse{
+        position: relative;
+        background-color: white;
+    }
+    #navbarNav{
+        margin-left: 0% !important;
+    }
+    #loginbutt{
+        display: none;
+    }
+    .user-items{
+        display: block !important   ;
+        padding: 0px;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        box-shadow: none;
+    }
+    .sub-item{
+        border: 1px solid #cacaca;
+        margin: 10px 0px;
+    }
 }
 @media (max-width: 992px) {
+    #navbarNav{
+        margin-left: 20% ;
+    }
 }
 
 @media screen and (max-width: 1200px) {
    .carItems{
         grid-template-columns: 1fr 1fr ;
+    }
+    #navbarNav{
+        margin-left: 25%;
     }
 }
